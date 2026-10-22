@@ -66,3 +66,15 @@ fun FormIsian(
                 thickness = dimensionResource(id = R.dimen.pthickness_divider),
                 color = Color.Red
             )
+
+            Row {
+                jenisK.forEach { item ->
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        RadioButton(
+                            selected = false,
+                            onClick = { item }
+                        )
+                        Text(text = item)
+                    }
+                }
+            }
