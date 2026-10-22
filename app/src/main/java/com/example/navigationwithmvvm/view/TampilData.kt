@@ -68,3 +68,8 @@ fun TampilData(
                             fontSize = 20.sp
                         )
                     }
+                    HorizontalDivider(
+                        thickness = dimensionResource(id = R.dimen.pthickness_divider),
+                        color = Color.Cyan
+                    )
+                }
