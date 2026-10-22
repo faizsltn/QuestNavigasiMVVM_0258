@@ -26,3 +26,10 @@ fun DataApp(
             startDestination = Navigasi.FormulirSaya.name,
             modifier = Modifier.padding(paddingValues = isiRuang)
         ) {
+            composable(route = Navigasi.FormulirSaya.name) {
+                FormIsian(
+                    OnSubmitBtnClick = {
+                        navController.navigate(route = Navigasi.Detail.name)
+                    }
+                )
+            }
