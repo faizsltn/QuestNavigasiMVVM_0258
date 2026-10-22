@@ -24,7 +24,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.navigationwithmvvm.R
-
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.width
+import androidx.compose.ui.Alignment
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TampilData(
@@ -48,11 +50,17 @@ fun TampilData(
         }
     ) { isiRuang ->
         Column(
-            modifier = Modifier.padding(paddingValues = isiRuang),
-            verticalArrangement = Arrangement.SpaceBetween
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(paddingValues = isiRuang),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Top
         ) {
             Column(
-                modifier = Modifier.padding(all = dimensionResource(id = R.dimen.padding_medium)),
+                modifier = Modifier
+                    .padding(top = 20.dp)
+                    .width(250.dp),
+                horizontalAlignment = Alignment.Start,
                 verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_small))
             ) {
                 items.forEach { item ->
