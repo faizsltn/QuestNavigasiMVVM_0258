@@ -13,7 +13,7 @@ import com.example.navigationwithmvvm.view.TampilData
 
 enum class Navigasi {
     FormulirSaya,
-    Detailx
+    Detail
 }
 
 @Composable
