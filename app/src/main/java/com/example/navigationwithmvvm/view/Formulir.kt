@@ -78,3 +78,10 @@ fun FormIsian(
                     }
                 }
             }
+
+            HorizontalDivider(
+                modifier = Modifier
+                    .padding(all = dimensionResource(id = R.dimen.padding_small))
+                    .width(250.dp),
+                thickness = dimensionResource(id = R.dimen.pthickness_divider)
+            )
