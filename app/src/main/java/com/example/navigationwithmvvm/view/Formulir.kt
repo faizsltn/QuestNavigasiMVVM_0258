@@ -69,10 +69,17 @@ fun FormIsian(
 
             Row {
                 jenisK.forEach { item ->
-                    Row(verticalAlignment = Alignment.CenterVertically) {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.selectable(
+                            selected = (selectedJK == item),
+                            onClick = { selectedJK = item },
+                            role = Role.RadioButton
+                        )
+                    ) {
                         RadioButton(
-                            selected = false,
-                            onClick = { item }
+                            selected = (selectedJK == item),
+                            onClick = { selectedJK = item }
                         )
                         Text(text = item)
                     }
